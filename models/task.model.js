@@ -5,7 +5,7 @@ const restHapi = require('rest-hapi');
 const _ = require('lodash');
 
 module.exports = function (mongoose) {
-    var modelName = "project";
+    var modelName = "task";
     var Types = mongoose.Schema.Types;
 
 
@@ -14,13 +14,9 @@ module.exports = function (mongoose) {
             type: Types.String,
             required: true
         },
-        description: {
-            type: Types.String
-        },
-        framework: {
+        state: {
             type: Types.String
         }
-
     }, { collection: modelName });
 
 
@@ -29,11 +25,6 @@ module.exports = function (mongoose) {
         collectionName:modelName,
         routeOptions: {
             associations: {
-                pages: {
-                    type: "ONE_MANY",
-                    foreignField: "project",
-                    model: "page"
-                }
             },
             extraEndpoints: [
 
