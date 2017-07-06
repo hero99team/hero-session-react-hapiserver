@@ -11,7 +11,7 @@ function api(){
 
 
     let config = {
-        appTitle: "Builder",
+        appTitle: "Hero Session",
         enableTextSearch: true,
         docExpansion: 'list',
         enableSoftDelete: true,
@@ -26,7 +26,6 @@ function api(){
     server.connection({ port: 8124 });
 
     restHapi.config = config;
-
 
     server.register({
             register: restHapi,
@@ -44,17 +43,6 @@ function api(){
                         path: 'uploads',
                         listing: true
                     }
-                }
-            });
-
-            server.route({
-                method: 'POST',
-                path: '/test',
-                handler:function(request, reply) {
-                    let html = request.payload.html;
-                    var pretty = require('pretty');
-
-                    reply(pretty(html,{ocd: true}));
                 }
             });
 
