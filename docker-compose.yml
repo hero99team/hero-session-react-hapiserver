@@ -1,0 +1,16 @@
+version: '2'
+services:
+  library:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8124:8124
+    volumes:
+     - .:/home/app/
+     - ./uploads:/home/app/uploads
+     - ./node_modules:/home/app/node_modules
+#     - .:/home/app/node_modules
+

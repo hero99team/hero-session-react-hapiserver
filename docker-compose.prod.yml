@@ -1,0 +1,11 @@
+version: '2'
+services:
+  library:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8000:8124
+    volumes:
+       - ./uploads:/home/app/uploads

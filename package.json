@@ -1,0 +1,22 @@
+{
+  "name": "rest-hapi",
+  "version": "0.0.0",
+  "main": "api.js",
+  "dependencies": {
+    "bcrypt": "latest",
+    "decompress": "^4.2.0",
+    "extract-zip": "^1.6.5",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "hapi": "^16.4.3",
+    "htmltidy": "0.0.6",
+    "mongoose": "^4.9.9",
+    "pretty": "^2.0.0",
+    "request": "^2.81.0",
+    "rest-hapi": "latest",
+    "scssfmt": "^1.0.2",
+    "tidy-html5": "^0.1.1",
+    "unzip": "^0.1.11",
+    "unzipper": "^0.8.8"
+  }
+}
