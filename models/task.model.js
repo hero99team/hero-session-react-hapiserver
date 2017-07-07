@@ -16,6 +16,9 @@ module.exports = function (mongoose) {
         },
         state: {
             type: Types.String
+        },
+        token: {
+            type: Types.String
         }
     }, { collection: modelName });
 
